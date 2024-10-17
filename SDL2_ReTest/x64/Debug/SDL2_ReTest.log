@@ -1,0 +1,8 @@
+﻿  animation.cpp
+  engine.cpp
+  player.cpp
+C:\Mic\Programmation\Projets_C++\SDL2_ReTest\src\player.cpp(17,47): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Mic\Programmation\Projets_C++\SDL2_ReTest\src\player.cpp(17,31): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Mic\Programmation\Projets_C++\SDL2_ReTest\src\player.cpp(22,22): warning C4305: 'argument' : troncation de 'double' à 'float'
+  Génération de code en cours...
+  SDL2_ReTest.vcxproj -> C:\Mic\Programmation\Projets_C++\SDL2_ReTest\x64\Debug\SDL2_ReTest.exe

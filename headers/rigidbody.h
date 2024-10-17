@@ -6,6 +6,13 @@
 #define UNI_MASS 1.0f
 #define GRAVITY 9.8f;
 
+#define FORWARD 1
+#define BACKWARD -1
+
+#define UPWARD -1
+#define DOWNWARD 1
+
+
 class Rigidbody {
 public:
 	Rigidbody() {

@@ -4,9 +4,11 @@
 #include "../headers/vector2D.h"
 #include "../headers/transform.h"
 #include "../headers/player.h"
+#include "../headers/input.h"
 
 Engine* Engine::s_Instance = nullptr;
 Player* player = nullptr;
+Input* Input::s_Instance = nullptr;
 
 bool Engine::Init() {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0 && IMG_Init(IMG_INIT_PNG) != 0) {
@@ -27,9 +29,9 @@ bool Engine::Init() {
 	}
 
 	//Test image
-	TextureManager::GetInstance()->LoadTexture("player", "assets/player_idle.png");
-	player = new Player(new Properties("player", 100, 200, 64, 64));
-
+	TextureManager::GetInstance()->LoadTexture("player_idle", "assets/player_idle.png");
+	TextureManager::GetInstance()->LoadTexture("player_run", "assets/player_run.png");
+	player = new Player(new Properties("player_idle", 100, 200, 64, 64));
 	return m_isRunning = true;
 }
 
@@ -48,7 +50,8 @@ void Engine::Quit() {
 }
 
 void Engine::Update() {
-	player->Update(2);
+	player->Update(0);
+	
 }
 void Engine::Render() {
 	SDL_SetRenderDrawColor(m_render_surface, 120, 40, 40, 255);
@@ -58,14 +61,5 @@ void Engine::Render() {
 	SDL_RenderPresent(m_render_surface);
 }
 void Engine::Events() {
-	SDL_Event event;
-	SDL_PollEvent(&event);
-	switch (event.type)
-	{
-	case SDL_QUIT:
-		Quit();
-		break;
-	default:
-		break;
-	}
+	Input::GetInstance()->Listen();
 }

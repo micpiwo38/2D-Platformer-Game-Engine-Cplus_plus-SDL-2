@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\animation.cpp" />
     <ClCompile Include="src\engine.cpp" />
+    <ClCompile Include="src\input.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\player.cpp" />
     <ClCompile Include="src\texture_manager.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="headers\animation.h" />
     <ClInclude Include="headers\character.h" />
     <ClInclude Include="headers\game_object.h" />
+    <ClInclude Include="headers\input.h" />
     <ClInclude Include="headers\object.h" />
     <ClInclude Include="headers\player.h" />
     <ClInclude Include="headers\rigidbody.h" />
